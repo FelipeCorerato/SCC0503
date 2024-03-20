@@ -13,8 +13,7 @@ run:
 	./main
 
 test:
-	$(CC) -o single-main ./single-main.c
-	#$(CC) -o main ./main.c ./lib/adjacency_matrix/adjacency_matrix.c ./lib/queue/queue.c
+	$(CC) -o main ./main.c ./lib/adjacency_matrix/adjacency_matrix.c ./lib/queue/queue.c
 	@for input_file in $(tests-directory)/*.in; do \
 		base_name=$$(basename $$input_file .in); \
 		output_file=$(tests-directory)/$$base_name.out; \
